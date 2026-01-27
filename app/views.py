@@ -39,7 +39,7 @@ class CreateUserView(APIView):
         
         return Response({
             'tokens': tokens,
-            'user': UserSerializer(user).data
+            'user': user_serializer.data
         }, status=status.HTTP_201_CREATED)
 
 
